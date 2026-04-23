@@ -11,10 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== AUTO ACTIVE NAV LINK =====
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinkItems = document.querySelectorAll('.nav-links a');
+  //AUTO ACTIVE NAV LINK
 
+  let currentPage = window.location.pathname.split('/').pop();
+
+  // Agar empty hai toh index.html samjho
+  if (currentPage === '' || currentPage === 'website') {
+    currentPage = 'index.html';
+  }
+
+  // Agar .html nahi hai toh add karo
+  if (currentPage !== '' && !currentPage.includes('.html')) {
+    currentPage = currentPage + '.html';
+  }
+
+  const navLinkItems = document.querySelectorAll('.nav-links a');
   navLinkItems.forEach(link => {
     link.classList.remove('active');
     const linkHref = link.getAttribute('href');
