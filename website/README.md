@@ -29,22 +29,27 @@ A modern, fully responsive website build for the DevelopersHub Corporation inter
 - Mobile hamburger menu
 
 ## Folder Structure
-website/
-|--index.html
-|--about.html
-|--service.html
-|--portfolio.html
-|--contact.html
-|--booking.html
-|--css/
-|   |--style.css
-|   |--responsive.css
-|--js/
-|   |--main.js
-|--README.md
 
 ```
+website/
+├── index.html
+├── about.html
+├── services.html
+├── portfolio.html
+├── contact.html
+├── booking.html
+├── css/
+│   ├── style.css
+│   └── responsive.css
+├── js/
+│   └── main.js
+├── images/
+└── README.md
+```
+
+
 ## Setup Instructions
+```
 1.Clone the repository
 ```
 Git clone   http://github.com/yourusername/developershub-website.git
@@ -52,4 +57,14 @@ Git clone   http://github.com/yourusername/developershub-website.git
 ```
 2. Open the project folder
 ```
+cd developershub-website
+```
+3. Open `index.html` with Live Server in VS Code
 
+## Deployment
+Deployed on Netlify - [Live Link](#)
+
+## Developed By
+Kinza Imtiaz - Front-End Development Intern
+
+``
