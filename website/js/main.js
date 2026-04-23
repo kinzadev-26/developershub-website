@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
 
-  // ===== AUTO ACTIVE NAV LINK =====
+//AUTO ACTIVE NAV LINK 
   let currentPage = window.location.pathname;
 
   if (currentPage === '/' || currentPage === '') {
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
-  }
 
   // Min date set karo
   const dateInput = document.getElementById('bookDate');
@@ -49,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const today = new Date().toISOString().split('T')[0];
     dateInput.min = today;
   }
-
-});
 
 // ===== CONTACT FORM =====
 function submitForm() {
