@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== AUTO ACTIVE NAV LINK =====
-  let currentPage = window.location.pathname.split('/').pop();
-
-  // Agar empty hai toh index.html samjho
-  if (currentPage === '' || currentPage === 'website') {
+  let currentPage = window.location.pathname;
+  // Slash remove karo aur html add karo
+  if (currentPage === '/' || currentPage === '/website/' || currentPage === '') {
     currentPage = 'index.html';
-  }
-
-  // Agar .html nahi hai toh add karo
-  if (currentPage !== '' && !currentPage.includes('.html')) {
-    currentPage = currentPage + '.html';
+  } else {
+    // Last part lo aur .html add karo agar nahi hai
+    currentPage = currentPage.split('/').pop();
+    if (!currentPage.includes('.html')) {
+      currentPage = currentPage + '.html';
+    }
+    if (currentPage === '') {
+      currentPage = 'index.html';
+    }
   }
 
   const navLinkItems = document.querySelectorAll('.nav-links a');
