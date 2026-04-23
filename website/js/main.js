@@ -1,18 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ===== HAMBURGER MENU =====
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-
-  if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      hamburger.classList.toggle('active');
-    });
-  }
-
-  //AUTO ACTIVE NAV LINK
-
+  // ===== AUTO ACTIVE NAV LINK =====
   let currentPage = window.location.pathname.split('/').pop();
 
   // Agar empty hai toh index.html samjho
