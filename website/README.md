@@ -2,7 +2,7 @@
 A modern, fully responsive website build for the DevelopersHub Corporation internship task.
 
 ## Live Demo
-[click here to view the website](#)
+[click here to view the website](http://rad-sprite-b53385.netlify.app)
 
 ## Tech Stack
 - HTML5
@@ -51,7 +51,7 @@ website/
 ```
 1.Clone the repository
 ```
-Git clone   http://github.com/yourusername/developershub-website.git
+Git clone   http://github.com/kinzadev-26/developershub-website.git
 
 ```
 2. Open the project folder
@@ -61,7 +61,7 @@ cd developershub-website
 3. Open `index.html` with Live Server in VS Code
 
 ## Deployment
-Deployed on Netlify - [Live Link](#)
+Deployed on Netlify - [Live Link](http://rad-sprite-b53385.netlify.app)
 
 ## Developed By
 Kinza Imtiaz - Front-End Development Intern
