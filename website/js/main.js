@@ -2,17 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== AUTO ACTIVE NAV LINK =====
   let currentPage = window.location.pathname;
-  // Slash remove karo aur html add karo
-  if (currentPage === '/' || currentPage === '/website/' || currentPage === '') {
+
+  if (currentPage === '/' || currentPage === '') {
     currentPage = 'index.html';
   } else {
-    // Last part lo aur .html add karo agar nahi hai
-    currentPage = currentPage.split('/').pop();
+    currentPage = currentPage.replace('/', '');
     if (!currentPage.includes('.html')) {
       currentPage = currentPage + '.html';
-    }
-    if (currentPage === '') {
-      currentPage = 'index.html';
     }
   }
 
