@@ -26,6 +26,7 @@ A modern, fully responsive website build for the DevelopersHub Corporation inter
 - Contact form with validation
 - 3-step meeting booking form
 - Mobile hamburger menu
+- Dark/Light mode 
 
 ## Folder Structure
 

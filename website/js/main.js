@@ -6,6 +6,33 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
   hamburger.classList.toggle('active');
 });
+// ===== DARK/LIGHT MODE =====
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+
+// Saved theme load karo
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  document.body.classList.add('light-mode');
+  themeIcon.classList.remove('fa-moon');
+  themeIcon.classList.add('fa-sun');
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+
+    if (document.body.classList.contains('light-mode')) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+      localStorage.setItem('theme', 'light');
+    } else {
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+}
 
 // ===== PORTFOLIO FILTER =====
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -27,6 +54,195 @@ if (filterBtns.length > 0) {
       });
     });
   });
+// ===== PORTFOLIO MODAL =====
+const projects = {
+  1: {
+    icon: '<i class="fas fa-laptop-code"></i>',
+    tag: 'Web Development',
+    title: 'E-Commerce Platform',
+    desc: 'A fully featured online store with payment integration, inventory management, and admin dashboard. Built with modern technologies for a seamless shopping experience.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    features: [
+      'Product catalog with filters',
+      'Shopping cart & checkout',
+      'Payment gateway integration',
+      'Admin dashboard',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  2: {
+    icon: '<i class="fas fa-robot"></i>',
+    tag: 'AI Solutions',
+    title: 'AI Customer Support Bot',
+    desc: 'An intelligent chatbot that handles customer queries 24/7, reducing support costs by 60%. Powered by OpenAI GPT-4.',
+    tech: ['Python', 'OpenAI', 'Node.js'],
+    features: [
+      '24/7 automated responses',
+      'Natural language processing',
+      'Multi-language support',
+      'Analytics dashboard',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  3: {
+    icon: '<i class="fas fa-chart-line"></i>',
+    tag: 'Digital Marketing',
+    title: 'SEO Growth Campaign',
+    desc: 'Helped a retail brand increase organic traffic by 300% in just 6 months through targeted SEO and content strategy.',
+    tech: ['SEO', 'Google Ads', 'Analytics'],
+    features: [
+      'Keyword research & optimization',
+      'On-page & off-page SEO',
+      'Content strategy',
+      'Monthly reporting',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  4: {
+    icon: '<i class="fas fa-mobile-alt"></i>',
+    tag: 'Web Development',
+    title: 'Healthcare Web App',
+    desc: 'A patient management system with appointment booking, medical records, and billing features for a modern clinic.',
+    tech: ['React', 'Node.js', 'MongoDB'],
+    features: [
+      'Patient registration',
+      'Appointment booking',
+      'Medical records management',
+      'Billing & invoicing',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  5: {
+    icon: '<i class="fas fa-film"></i>',
+    tag: 'Post Production',
+    title: 'Brand Promo Video',
+    desc: 'A cinematic brand promotional video with motion graphics and professional color grading for a luxury brand.',
+    tech: ['Premiere Pro', 'After Effects', 'DaVinci'],
+    features: [
+      'Professional color grading',
+      'Motion graphics',
+      '4K resolution output',
+      'Sound design',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  6: {
+    icon: '<i class="fas fa-pen-nib"></i>',
+    tag: 'AI Solutions',
+    title: 'AI Content Generator',
+    desc: 'An AI-powered platform that generates SEO-optimized blog posts and social media content in seconds.',
+    tech: ['Python', 'GPT-4', 'React'],
+    features: [
+      'Blog post generation',
+      'Social media captions',
+      'SEO optimization',
+      'Multi-language support',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  7: {
+    icon: '<i class="fas fa-bullhorn"></i>',
+    tag: 'Digital Marketing',
+    title: 'Social Media Campaign',
+    desc: 'A multi-platform social media campaign that grew a brand following from 2K to 50K in just 3 months.',
+    tech: ['Instagram', 'Facebook', 'TikTok'],
+    features: [
+      'Content calendar',
+      'Paid ad campaigns',
+      'Influencer outreach',
+      'Performance analytics',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  8: {
+    icon: '<i class="fas fa-store"></i>',
+    tag: 'Web Development',
+    title: 'Restaurant Booking System',
+    desc: 'A modern restaurant website with online reservations, menu management, and order tracking system.',
+    tech: ['Next.js', 'Tailwind', 'Firebase'],
+    features: [
+      'Online table reservations',
+      'Digital menu management',
+      'Order tracking',
+      'Customer reviews',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+  9: {
+    icon: '<i class="fas fa-video"></i>',
+    tag: 'Post Production',
+    title: 'YouTube Channel Editing',
+    desc: 'Complete video editing and thumbnail design for a YouTube channel that grew to 100K subscribers.',
+    tech: ['Premiere Pro', 'Photoshop', 'Canva'],
+    features: [
+      'Video editing & cuts',
+      'Thumbnail design',
+      'End screen & cards',
+      'SEO optimization',
+    ],
+    demo: 'https://rad-sprite-b53385.netlify.app',
+    github: 'https://github.com/kinzadev-26/developershub-website',
+  },
+};
+
+function openModal(id) {
+  const project = projects[id];
+  if (!project) return;
+
+  document.getElementById('modalIcon').innerHTML = project.icon;
+  document.getElementById('modalTag').textContent = project.tag;
+  document.getElementById('modalTitle').textContent = project.title;
+  document.getElementById('modalDesc').textContent = project.desc;
+
+  // Tech tags
+  const techHTML = project.tech.map(t => `<span>${t}</span>`).join('');
+  document.getElementById('modalTech').innerHTML = techHTML;
+
+  // Features
+  const featuresHTML = `
+    <h4>Key Features</h4>
+    <ul>
+      ${project.features.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('')}
+    </ul>
+  `;
+  document.getElementById('modalFeatures').innerHTML = featuresHTML;
+
+  document.getElementById('modalDemo').href = project.demo;
+  document.getElementById('modalGithub').href = project.github;
+
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+// Modal Close
+document.addEventListener('DOMContentLoaded', () => {
+  const modalClose = document.getElementById('modalClose');
+  const modalOverlay = document.getElementById('modalOverlay');
+
+  if (modalClose) {
+    modalClose.addEventListener('click', () => {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
 
   // Min date set karo
   const dateInput = document.getElementById('bookDate');

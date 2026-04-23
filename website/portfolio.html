@@ -26,7 +26,7 @@
 
             <!----links------>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html" class="active">Portfolio</a></li>
@@ -39,6 +39,10 @@
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+            <!-- Dark/Light Toggle -->
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon" id="themeIcon"></i>
             </div>
         </div>
     </nav>
@@ -76,7 +80,9 @@
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(1); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -93,7 +99,9 @@
                             <span>OpenAI</span>
                             <span>Node.js</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(2); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-card" data-category="marketing">
@@ -110,7 +118,9 @@
                             <span>Google Ads</span>
                             <span>Analytics</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(3); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-card" data-category="web">
@@ -127,7 +137,9 @@
                             <span>Node.js</span>
                             <span>MongoDB</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(4); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-card" data-category="video">
@@ -143,7 +155,9 @@
                             <span>After Effects</span>
                             <span>DaVinci</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(5); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-card" data-category="ai">
@@ -159,7 +173,9 @@
                             <span>GPT-4</span>
                             <span>React</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(6); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-card" data-category="marketing">
@@ -177,7 +193,9 @@
                             <span>Facebook</span>
                             <span>TikTok</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(7); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-card" data-category="web">
@@ -193,7 +211,9 @@
                             <span>Tailwind</span>
                             <span>Firebase</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(8); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-card" data-category="video">
@@ -210,7 +230,9 @@
                             <span>PhotoShop</span>
                             <span>Canva</span>
                         </div>
-                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="service-link" onclick="openModal(9); return false;">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -271,6 +293,28 @@
             <p>&copy; 2026 DevelopersHub Corporation. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- PROJECT MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon" id="modalIcon"></div>
+            <span class="portfolio-tag" id="modalTag"></span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div class="modal-tech" id="modalTech"></div>
+            <div class="modal-features" id="modalFeatures"></div>
+            <div class="modal-btns">
+                <a href="#" class="btn-primary" id="modalDemo">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="#" class="btn-outline" id="modalGithub">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 
