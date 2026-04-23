@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - DevelopersHub Corporation">
+    <title>Portfolio | DevelopersHub Corporation</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-----------navbar-------------->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-----logo------>
+            <a href="index.html" class="logo">
+                Developers<span>Hub</span>
+            </a>
+
+            <!----links------>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="nav-btn">Book a Meeting</a></li>
+            </ul>
+
+            <!-----Hamburger(Mobile)------->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <!-------------------------Page Hero----------------------->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <p class="section-badge">Our Work</p>
+            <h1>Our <span>Portfolio</span></h1>
+            <p>Explore our latest projects and see how we've helped businesses grow with modern digital solutions.</p>
+        </div>
+    </section>
+    <!-------------------Filter Buttons------------------->
+    <section class="portfolio-section">
+        <div class="portfolio-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn " data-filter="web">Web Development</button>
+                <button class="filter-btn " data-filter="ai">AI Solutions </button>
+                <button class="filter-btn " data-filter="marketing">Digital Marketing</button>
+                <button class="filter-btn " data-filter="video">Post Production</button>
+            </div>
+            <!-----------Porject grids------------------->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web Development</span>
+                        <h3>E-Commerce Plateform</h3>
+                        <p>A fully featured online store with payment integration, inventory management, and admin
+                            dashboard.</p>
+                        <div class="portfolio-tech">
+                            <span>Html</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="ai">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">AI Solutions</span>
+                        <h3>AI Customer Support Bot</h3>
+                        <p>An intelligent chatbot that handles customer queries 24/7, reducing support costs by 60%.</p>
+                        <div class="portfolio-tech">
+                            <span>Python</span>
+                            <span>OpenAI</span>
+                            <span>Node.js</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="marketing">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Digital Marketing</span>
+                        <h3>SEO Growth Campaingn</h3>
+                        <p>Helped a retail brand increase organic traffic by 300% in just 6 months through targeted SEO.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>SEO</span>
+                            <span>Google Ads</span>
+                            <span>Analytics</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web Development</span>
+                        <h3>Healthcare Web App</h3>
+                        <p>A patient management system with appointment booking, medical records, and billing features.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="video">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Post Production</span>
+                        <h3>Brand Promo Video</h3>
+                        <p>A cinimatic brand promotional video withmotion graphics and professional color grading.</p>
+                        <div class="portfolio-tech">
+                            <span>Premiere Pro</span>
+                            <span>After Effects</span>
+                            <span>DaVinci</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="ai">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">AI Solutions</span>
+                        <h3>AI Content Generation</h3>
+                        <p>An AI-powered plateform that generates SEO-optimized blog posts and social media content.</p>
+                        <div class="portfolio-tech">
+                            <span>Python</span>
+                            <span>GPT-4</span>
+                            <span>React</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="marketing">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Digital Marketing</span>
+                        <h3>Social Media Campaingn</h3>
+                        <p>A multi-platform social media campaingn that grew a brand's following from 2K to 50K in 3
+                            months.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>Instagram</span>
+                            <span>Facebook</span>
+                            <span>TikTok</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="web">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web Development</span>
+                        <h3>Resturant Booking System</h3>
+                        <p>A modern resturant website with online reservations, menu management, and order tracking</p>
+                        <div class="portfolio-tech">
+                            <span>Next.js</span>
+                            <span>Tailwind</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="video">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Post Production</span>
+                        <h3>YouTube Channel Editing</h3>
+                        <p>Complete video editing and thumbnail design for a YouTube channel that grew to 100K
+                            subcribers.</p>
+                        <div class="portfolio-tech">
+                            <span>Premiere Pro</span>
+                            <span>PhotoShop</span>
+                            <span>Canva</span>
+                        </div>
+                        <a href="#" class="service-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----------------CTA Section----------------------->
+    <section class="cta">
+        <div class="cta-container">
+            <h2>Have a Project <span>In Mind?</span></h2>
+            <p>Let's turn your idea into reality. Get in touch with our team today.</p>
+            <div class="cta-btns">
+                <a href="booking.html" class="btn-primary">Book a Free Meeting</a>
+                <a href="contact.html" class="btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    <!--------------Footer----------------------->
+    <footer class="footer">
+        <div class="footer-container">
+            <!----logo & about-------->
+            <div class="footer-col">
+                <a href="index.html" class="logo">Developers <span>Hub</span></a>
+                <p class="footer-desc">
+                    We build modern digital solutions that help businesses grow, automate, and succeed in the digital
+                    world.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a
+                        href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <!----Quick links-------->
+            <div class="footer-col">
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!----Services------>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Software Development</a></li>
+                    <li><a href="services.html">AI Solutions</a></li>
+                    <li><a href="services.html">AI Content Generation</a></li>
+                    <li><a href="services.html">Digital Marketing</a></li>
+                    <li><a href="services.html">Post Production</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-----footer bottom -------->
+        <div class="footer-bottom">
+            <p>&copy; 2026 DevelopersHub Corporation. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a Meeting - DevelopersHub Corporation">
+    <title>Book a Meeting | DevelopersHub Corporation</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-----------navbar-------------->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-----logo------>
+            <a href="index.html" class="logo">
+                Developers<span>Hub</span>
+            </a>
+
+            <!----links------>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="nav-btn">Book a Meeting</a></li>
+            </ul>
+
+            <!-----Hamburger(Mobile)------->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <!-------------------------Page Hero----------------------->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <p class="section-badge">Free Consulation</p>
+            <h1>Book a <span>Meeting</span></h1>
+            <p>
+                Schedule a free consulation with our team. We'll discuss your project and find the best solution for
+                you.
+            </p>
+        </div>
+    </section>
+    <!-------------------------Booking section-------------->
+    <section class="booking-section">
+        <div class="booking-container">
+            <!--------------Left info--------------------->
+            <div class="booking-info">
+                <h2>What to <span>Expect</span></h2>
+                <p>Our free consulation is a 30-minute call where we discuss your goals, challenges, and how we can
+                    help. </p>
+
+                <div class="expect-items">
+                    <div class="expect-item">
+                        <div class="expect-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div>
+                            <h4>Project Discussion</h4>
+                            <p>We'll listen to your ideas and understand your business needs in detail.</p>
+                        </div>
+                    </div>
+                    <div class="expect-item">
+                        <div class="expect-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h4>Expert Advice</h4>
+                            <p>Get professional recommendations on the best technology and approach for your project.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="expect-item">
+                        <div class="expect-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Free Proposal</h4>
+                            <p>Receive a detailed project proposal with timeline and pricing after the call.</p>
+                        </div>
+                    </div>
+                    <div class="expect-item">
+                        <div class="expect-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>30 Minutes Only</h4>
+                            <p>Quick and focused session - no time wasted, just pure value.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-----------------Meeting types------------->
+                <div class="meeting-types">
+                    <h4>Meeting Options</h4>
+                    <div class="meeting-type-btns">
+                        <button class="meeting-type active" id="videoBtn" onclick="selectMeeting('video')">
+                            <i class="fas fa-video">Video Call</i>
+                        </button>
+                        <button class="meeting-type" id="phoneBtn" onclick="selectMeeting('phone')">
+                            <i class="fas fa-phone">Phone Call</i>
+                        </button>
+                        <button class="meeting-type" id="inpersonBtn" onclick="selectMeeting('inperson')">
+                            <i class="fas fa-handshake">In Person</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--------------------Right: booking form--------->
+            <div class="booking-form-box">
+                <h2>Schedule your <span>Meeting</span></h2>
+                <!-----------Step indicator------------>
+                <div class="steps">
+                    <div class="step active" id="step1Indicator">
+                        <span>1</span>
+                        <p>Your Info</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step active" id="step2Indicator">
+                        <span>2</span>
+                        <p>Date & Time</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step active" id="step3Indicator">
+                        <span>3</span>
+                        <p>Confirm</p>
+                    </div>
+                </div>
+                <!------------Step 1: Personal info------>
+                <div class="booking-step" id="step1">
+                    <div class="input-group">
+                        <label>Full Name:</label>
+                        <input type="text" id="bookName" placeholder="John Smith">
+                        <span class="error-msg" id="bookNameError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Email:</label>
+                        <input type="email" id="bookEmail" placeholder="John@example.com">
+                        <span class="error-msg" id="bookEmailError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number:</label>
+                        <input type="tel" id="bookPhone" placeholder="+1 (555) 000-0000">
+                        <span class="error-msg" id="bookPhoneError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Service Interested In</label>
+                        <select id="bookService">
+                            <option value="">Select a Service...</option>
+                            <option value="web">Software Development</option>
+                            <option value="ai">AI Solutions and Automation</option>
+                            <option value="content">AI Content Generation</option>
+                            <option value="marketing">Digital Marketing</option>
+                            <option value="video">Post Production</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-msg" id="bookServiceError"></span>
+                    </div>
+                    <button class="btn-primary submit-btn" onclick="nextToStep2()">
+                        Next: Pick a Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <!-------------STep 2: Date and time------->
+                <div class="booking-step hidden-step" id="step2">
+                    <div class="input-group">
+                        <label>Select a Date</label>
+                        <input type="date" id="bookDate">
+                        <span class="error-msg" id="bookDateError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Select Time Slot</label>
+                        <div class="time-slots" id="timeSlots">
+                            <button class="time-slot" onclick="selectTime(this)">9:00 AM</button>
+                            <button class="time-slot" onclick="selectTime(this)">10:00 AM</button>
+                            <button class="time-slot" onclick="selectTime(this)">11:00 AM</button>
+                            <button class="time-slot" onclick="selectTime(this)">12:00 PM</button>
+                            <button class="time-slot" onclick="selectTime(this)">2:00 PM</button>
+                            <button class="time-slot" onclick="selectTime(this)">3:00 PM</button>
+                            <button class="time-slot" onclick="selectTime(this)">4:00 PM</button>
+                            <button class="time-slot" onclick="selectTime(this)">5:00 PM</button>
+                        </div>
+                        <span class="error-msg" id="bookTimeError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Additional Notes (optional)</label>
+                        <textarea id="bookNotes" rows="3"
+                            placeholder="Tell us briefly about your project..."></textarea>
+                    </div>
+                    <div class="step-btns">
+                        <button class="btn-outline" onclick="backToStep1()">
+                            <i class="fas fa-arrow-left"></i>Back
+                        </button>
+                        <button class="btn-primary" onclick="nextToStep3()">
+                            Review Booking <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <!----------------Step 3: Confirmation--------->
+                <div class="booking-step hidden-step" id="step3">
+                    <div class="booking-summary">
+                        <h3>Booking Summary</h3>
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span><i class="fas fa-user"></i>Name</span>
+                                <strong id="sumName">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span><i class="fas fa-envelope"></i>Email</span>
+                                <strong id="sumEmail">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span><i class="fas fa-phone"></i>Phone</span>
+                                <strong id="sumPhone">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span><i class="fas fa-cog"></i>Service</span>
+                                <strong id="sumService">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span><i class="fas fa-calendar"></i>Date</span>
+                                <strong id="sumDate">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span><i class="fas fa-clock"></i>Time</span>
+                                <strong id="sumTime">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span><i class="fas fa-video"></i>Meeting Type </span>
+                                <strong id="sumMeeting">Video Call</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-btns">
+                        <button class="btn-outline" onclick="backToStep2()">
+                            <i class="fas fa-arrow-left"></i>Back
+                        </button>
+                        <button class="btn-primary" onclick="confirmBooking()">
+                            Confirm Booking <i class="fas fa-arrow-check"></i>
+                        </button>
+                    </div>
+                    <!----------Success----------->
+                    <div class="success-msg" id="bookingSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        Meeting booked successfully! Check your email for confirmation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------Footer----------------------->
+    <footer class="footer">
+        <div class="footer-container">
+            <!----logo & about-------->
+            <div class="footer-col">
+                <a href="index.html" class="logo">Developers <span>Hub</span></a>
+                <p class="footer-desc">
+                    We build modern digital solutions that help businesses grow, automate, and succeed in the digital
+                    world.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a
+                        href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <!----Quick links-------->
+            <div class="footer-col">
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!----Services------>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Software Development</a></li>
+                    <li><a href="services.html">AI Solutions</a></li>
+                    <li><a href="services.html">AI Content Generation</a></li>
+                    <li><a href="services.html">Digital Marketing</a></li>
+                    <li><a href="services.html">Post Production</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-info">
+          <li><i class="fas fa-envelope"></i> info@developershub.com</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 000-0000</li>
+          <li><i class="fas fa-map-marker-alt"></i> New York, USA</li>
+        </ul>
+      </div>
+        <!-----footer bottom -------->
+        <div class="footer-bottom">
+            <p>&copy; 2026 DevelopersHub Corporation. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
