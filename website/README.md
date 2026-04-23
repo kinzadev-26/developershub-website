@@ -25,7 +25,6 @@ A modern, fully responsive website build for the DevelopersHub Corporation inter
 - Portfolio filter by category
 - Contact form with validation
 - 3-step meeting booking form
-- Auto active navbar
 - Mobile hamburger menu
 
 ## Folder Structure
