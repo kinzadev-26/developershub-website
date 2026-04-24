@@ -55,23 +55,52 @@
     .cta h2 {
         font-size: 1.8rem;
     }
+    .cta-btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .cta-btns a{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
 
+    .page-hero{
+        padding: 120px 16px 60px;
+    }
     .page-hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .page-hero-content p{
+        font-size: 0.9rem;
     }
 
     .story-container {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .story-content h2{
+        font-size: 1.5rem;
+    }
+    .story-stats{
+        grid-template-columns: repeat(2,1fr);
     }
 
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .service-grid{
+        grid-template-columns: 1fr;
+    }
+    .section-header h2{
+        font-size: 1.8rem;
+    }
     .service-detail-card {
         grid-template-columns: 1fr;
-        padding: 28px;
-        gap: 24px;
+        padding: 24px;
+        gap: 20px;
     }
 
     .service-features {
